@@ -14,34 +14,25 @@
         <div class="">
             <div class="container grid grid-cols-2 rounded h-64 divide-x-2 divide-teal-400">
                 <div class="mt-0">
+                <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
                     <div class="bg-none rounded px-8 pt-6 pb-8 mb-4 flex flex-col h-5/6">
                         <div class="mb-4">
-                            <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
-                            Username
-                            </label>
-                            <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="username" type="text" placeholder="Username">
+                            <%= f.label :username, class: "block text-grey-darker text-sm font-bold mb-2" %>
+                            <%= f.text_field :username, class: "appearance-none border rounded w-full py-2 px-3 text-grey-darker" %>
                         </div>
                         <div class="mb-1">
-                            <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
-                                Password
-                            </label>
-                            <input class="appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************">
-                            <button class="text-teal-900 font-bold py-2 px-4 rounded hover:border hover:border-teal-800" type="button">
-                                Sign In
-                            </button>
+                            <%= f.label :password, class: "block text-grey-darker text-sm font-bold mb-2" %>
+                            <%= f.password_field :password, class: "appearance-none border rounded w-full py-2 px-3 text-grey-darker" %>
+                            <%= f.submit "Log In", class: "text-teal-900 font-bold py-2 px-4 rounded hover:border hover:border-teal-800 mt-2 self-center" %>
                         </div>
-                        <div class="flex items-center justify-between">
-
-                        </div>
+                    <% end %>
                     </div>
                 </div>
                 
                 <div class="my-3">
                     <div class="bg-none rounded px-8 pt-6 pb-8 mb-4 flex flex-col h-5/6">
                         <h2 class="text-center">Need an account?</h2>
-                        <button class="self-center w-2/4 text-teal-900 font-bold py-2 px-4 rounded border border-teal-800 hover:bg-green-200" type="button">
-                            Sign Up
-                        </button>
+                        <%= link_to 'Sign Up', signup_path, class: "self-center w-2/4 text-teal-900 font-bold py-2 px-4 rounded border border-teal-800 hover:bg-green-200" %>
                     </div>
                 </div>
 
