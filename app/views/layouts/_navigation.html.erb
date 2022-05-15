@@ -1,8 +1,7 @@
 <%# TODOS: 
         Make the buttons move into a hamburger button on md/sm screens
         Add conditional highlighting to buttons for active page %>
-
-        <nav class="w-full flex flex-row items-center justify-between flex-wrap bg-green-200 p-1 rounded border-2 border-gray-600">
+        <nav class="w-full flex flex-row items-center justify-between flex-wrap bg-green-200 p-1 rounded border-2 border-gray-600 h-16">
             <div class="flex items-center flex-shrink-0 text-teal-900 mr-6">
                 <span class="font-semibold text-xl tracking-tight mx-2 underline decoration-dotted decoration-teal-400 text-teal-800">MessageMe</span>
                 <img src="https://www.pngmart.com/files/16/Speech-Chat-Icon-Transparent-PNG.png" class="h-8 w-8" alt="An image of chat bubbles." />
@@ -10,9 +9,7 @@
 
             <div class="w-full flex-grow flex items-center w-auto my-0">
                 <div class="text-sm flex-grow">
-                    <a href="#responsive-header" class="block mt-4 inline-block mt-0 text-teal-800 rounded px-2 py-2 hover:text-black hover:bg-green-300 border border-green-200 hover:border-black focus:text-black focus:bg-green-300 focus:outline-none focus:ring focus:ring-teal-400 active:bg-green-400 mr-4">
-                        Chatroom
-                    </a>
+                    <%= link_to 'Chatroom', root_path, class: "block mt-4 inline-block mt-0 text-teal-800 rounded px-2 py-2 hover:text-black hover:bg-green-300 border border-green-200 hover:border-black focus:text-black focus:bg-green-300 focus:outline-none focus:ring focus:ring-teal-400 active:bg-green-400 mr-4" %>
                     <a href="#responsive-header" class="block mt-4 inline-block mt-0 text-teal-800 rounded px-2 py-2 hover:text-black hover:bg-green-300 border border-green-200 hover:border-black focus:text-black focus:bg-green-300 focus:outline-none focus:ring focus:ring-teal-400 active:bg-green-400 mr-4">
                         Messages
                     </a>
@@ -21,7 +18,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-teal-900 border-teal-900 hover:text-black hover:bg-green-300 hover:border-black mt-4 lg:mt-0 active:bg-green-400">Sign In</a>
+                    <%= link_to 'Log In', login_path, class: "inline-block text-sm px-4 py-2 leading-none border rounded text-teal-900 border-teal-900 hover:text-black hover:bg-green-300 hover:border-black mt-4 lg:mt-0 active:bg-green-400" %>
                 </div>
             </div>
         </nav>

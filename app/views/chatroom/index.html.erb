@@ -1,43 +1,45 @@
-<div class="flex items-center justify-between flex-wrap bg-white w-fit h-100">
+<div class="flex items-center flex-wrap bg-white w-fit h-100">
 
     <%= render 'layouts/navigation' %>
 
-    <div class="container flex flex-row mt-1 box-border h-5/6 w-100 p-4 rounded border-4 border-teal-500 bg-green-100">
+    
+    <div class="container flex flex-col mt-1 box-border w-100 p-4 rounded border-4 border-teal-500 bg-green-100 h-100">
 
-          <div class="w-60 h-48 shadow-xl bg-green-200 rounded border-2 border-teal-800 px-1">
-            <ul class="relative">
-                <li class="relative">
-                    <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 1</a>
-                </li>
-                <li class="relative">
-                    <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 2</a>
-                </li>
-                <li class="relative">
-                    <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 2</a>
-                </li>
-            </ul>
-        </div>      
+        <div class="container flex flex-row">
+            <div class="w-60 h-48 shadow-xl bg-green-200 rounded border-2 border-teal-800 px-1">
+                <ul class="relative">
+                    <li class="relative">
+                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 1</a>
+                    </li>
+                    <li class="relative">
+                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 2</a>
+                    </li>
+                    <li class="relative">
+                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 2</a>
+                    </li>
+                </ul>
+            </div>      
 
-        <div class="container flex flex-col ml-6 w-100 p-4 shadow-xl rounded border-2 border-teal-800 px-1 bg-teal-200">
-            <div class="container items-center mt-0 mb-3">
-                <img src="https://www.pngmart.com/files/16/Speech-Chat-Icon-Transparent-PNG.png" class="h-20 w-20 mx-auto" alt="An image of chat bubbles." />
-                <h1 class="text-2xl text-center text-teal-900">Say Something Below:</h1>
+            <div class="container flex flex-col ml-6 w-100 p-4 shadow-xl rounded border-2 border-teal-800 px-1 bg-teal-200">
+                <div class="container items-center mt-0 mb-3">
+                    <img src="https://www.pngmart.com/files/16/Speech-Chat-Icon-Transparent-PNG.png" class="h-20 w-20 mx-auto" alt="An image of chat bubbles." />
+                    <h1 class="text-2xl text-center text-teal-900">Say Something Below:</h1>
+                </div>
+
+                <div class="container border-dotted border-2 border-black h-80 bg-teal-100">
+                    <em>Person</em>: Test Message.
+                </div>
+
+                <div class="container h-20">
+                    <form>
+                        <div class="form-group flex flex-row">
+                            <input type="text" class="form-control block w-full px-3 my-2 text-base text-green-900 bg-white bg-clip-padding rounded border border-teal-500 focus:outline-none" placeholder="Add something to the conversation.">
+                            <button type="submit" class="bg-teal-400 rounded shadow-xl p-3 my-2">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="container border-dotted border-2 border-black h-80 bg-teal-100">
-                <em>Person</em>: Test Message.
-            </div>
-
-            <div class="container h-20">
-                <form>
-                    <div class="form-group flex flex-row">
-                        <input type="text" class="form-control block w-full px-3 my-2 text-base text-green-900 bg-white bg-clip-padding rounded border border-teal-500 focus:outline-none" placeholder="Add something to the conversation.">
-                        <button type="submit" class="bg-teal-400 rounded shadow-xl p-3 my-2">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-            
+        </div>    
     </div>
 
 </div>

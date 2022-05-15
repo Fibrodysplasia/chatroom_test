@@ -1,0 +1,51 @@
+<div class="flex items-center flex-wrap bg-white w-fit h-100">
+
+    <%= render 'layouts/navigation' %>
+
+    <div class="container flex flex-col mt-1 box-border w-100 p-4 rounded border-4 border-teal-500 bg-green-100 h-100">
+
+        <div class="container items-center mt-0 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="my-3 mx-auto h-16 w-16 fill-teal-100 stroke-teal-900" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <h1 class="text-2xl text-center text-teal-900">Log In or Sign Up to Continue:</h1>
+        </div>
+
+        <div class="">
+            <div class="container grid grid-cols-2 rounded h-64 divide-x-2 divide-teal-400">
+                <div class="mt-0">
+                    <div class="bg-none rounded px-8 pt-6 pb-8 mb-4 flex flex-col h-5/6">
+                        <div class="mb-4">
+                            <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                            Username
+                            </label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="username" type="text" placeholder="Username">
+                        </div>
+                        <div class="mb-1">
+                            <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                                Password
+                            </label>
+                            <input class="appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************">
+                            <button class="text-teal-900 font-bold py-2 px-4 rounded hover:border hover:border-teal-800" type="button">
+                                Sign In
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="my-3">
+                    <div class="bg-none rounded px-8 pt-6 pb-8 mb-4 flex flex-col h-5/6">
+                        <h2 class="text-center">Need an account?</h2>
+                        <button class="self-center w-2/4 text-teal-900 font-bold py-2 px-4 rounded border border-teal-800 hover:bg-green-200" type="button">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
