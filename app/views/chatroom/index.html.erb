@@ -32,12 +32,13 @@
                 </div>
 
                 <div class="container h-20">
-                    <form>
-                        <div class="form-group flex flex-row">
-                            <input type="text" class="form-control block w-full px-3 my-2 text-base text-green-900 bg-white bg-clip-padding rounded border border-teal-500 focus:outline-none" placeholder="Add something to the conversation.">
-                            <button type="submit" class="bg-teal-400 rounded shadow-xl p-3 my-2">Submit</button>
+                    <%= form_for(@message, html: {class: "form-group flex flex-row", role: "form"}, url: message_path) do |f| %>
+                        <div class="form-group flex flex-row w-full">
+                            <%= f.text_field :body, class: "block w-full px-3 my-2 text-base text-green-900 bg-white bg-clip-padding rounded border border-teal-500 focus:outline-none", placeholder: "Add something to the conversation." %>
+                            
+                            <%= f.button 'Submit', class: "bg-teal-400 rounded shadow-xl p-3 my-2" %>
                         </div>
-                    </form>
+                    <% end %>
                 </div>
             </div>
         </div>
