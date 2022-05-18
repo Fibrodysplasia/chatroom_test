@@ -4,6 +4,13 @@
     <%= render 'layouts/navigation' %>
 
     <div class="container flex flex-col mt-1 box-border w-100 p-4 rounded border-4 border-teal-500 bg-green-100 h-100">
+    <% if flash.any? %>
+        <% flash.each do |type, msg| %>
+            <div class="py-2 px-4 font-bold msg-<%= type %>">
+            <%= msg %>
+            </div>
+        <% end %>
+    <% end %>
     <%= render 'form' %>
     </div>
 </div>
