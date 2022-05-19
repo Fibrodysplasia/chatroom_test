@@ -5,7 +5,9 @@ class MessagesController < ApplicationController
   def create
     message = current_user.message.build(message_params)
     if message.save
-      redirect_to  root_path
+      ActionCable.server.broadcast 'chatroom_channel', message: render_message(message), username: message.user.username
+    else
+      render root_path
     end
   end
 
