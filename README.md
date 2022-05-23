@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a generic real-time messaging app using ActionCable.
 
-Things you may want to cover:
+* Ruby version: 3.0.2
+* Rails version: 7.0.3
 
-* Ruby version
+* Styled using [TailwindCSS]([url](https://tailwindcss.com/))
 
-* System dependencies
+* Authentication with BCrypt
 
-* Configuration
+* ![image](https://user-images.githubusercontent.com/16516093/169734294-a34f62d7-8f98-4eae-a740-43ebd0f555d9.png)
+*![image](https://user-images.githubusercontent.com/16516093/169734439-d4c088e3-d0ba-40ce-a92b-03a7c35222ab.png)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
