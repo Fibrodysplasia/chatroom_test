@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ #messages {
+     overflow: auto;
+ }
+
+ #all-users {
+     overflow: auto;
+ }

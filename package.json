@@ -3,7 +3,8 @@
   "private": "true",
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
-    "@hotwired/turbo-rails": "^7.1.1",
+    "@hotwired/turbo-rails": "^7.1.2",
+    "@rails/actioncable": "^6.0.5",
     "esbuild": "^0.14.39",
     "flowbite": "^1.4.5"
   },

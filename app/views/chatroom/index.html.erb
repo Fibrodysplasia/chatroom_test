@@ -5,17 +5,14 @@
 
     <div class="container flex flex-col mt-1 box-border w-100 p-4 rounded border-4 border-teal-500 bg-green-100 h-100">
         <div class="container flex flex-row">
-            <div class="w-60 h-48 shadow-xl bg-green-200 rounded border-2 border-teal-800 px-1">
+            <div class="w-60 h-48 shadow-xl bg-green-200 rounded border-2 border-teal-800 px-1" id="all-users">
+            <h2 class="w-100 bg-green-300 text-teal-900">Users:</h2>
                 <ul class="relative">
+                    <% @users.each do |u| %>
                     <li class="relative">
-                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 1</a>
+                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark"><%= u.username %></a>
                     </li>
-                    <li class="relative">
-                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 2</a>
-                    </li>
-                    <li class="relative">
-                        <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-green-900 hover:bg-green-300 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Sidenav link 2</a>
-                    </li>
+                    <% end %>
                 </ul>
             </div>      
 
@@ -25,18 +22,18 @@
                     <h1 class="text-2xl text-center text-teal-900">Say Something Below:</h1>
                 </div>
 
-                <div class="container border-dotted border-2 border-black h-80 bg-teal-100">
-                    <% @messages.each do |message| %>
-                        <em class="ml-2 underline"><%= message.user.username %></em>: <%= message.body %> <br>
-                    <% end %>
+                <%= turbo_stream_from "messages" %>
+                <div class="container border-dotted border-2 border-black h-80 bg-teal-100" id="messages">
+                    <%= render @messages %>
                 </div>
 
                 <div class="container h-20">
-                    <%= form_for(@message, html: {class: "form-group flex flex-row", role: "form"}, url: message_path) do |f| %>
+                    <%= form_with(model: @message, html: {class: "form-group flex flex-row", role: "form"},
+                        data: { controller: "reset_form", action: "turbo:submit-end->reset-form#reset"}, url: message_path, remote: true) do |f| %>
                         <div class="form-group flex flex-row w-full">
-                            <%= f.text_field :body, class: "block w-full px-3 my-2 text-base text-green-900 bg-white bg-clip-padding rounded border border-teal-500 focus:outline-none", placeholder: "Add something to the conversation." %>
+                            <%= f.text_field :body, class: "block w-full px-3 my-2 text-base text-green-900 bg-white bg-clip-padding rounded border border-teal-500 focus:outline-none", placeholder: "Add something to the conversation.", id: "message-field" %>
                             
-                            <%= f.button 'Submit', class: "bg-teal-400 rounded shadow-xl p-3 my-2" %>
+                            <%= f.submit 'Submit', class: "bg-teal-400 rounded shadow-xl p-3 my-2" %>
                         </div>
                     <% end %>
                 </div>

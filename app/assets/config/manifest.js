@@ -2,4 +2,4 @@
 //= link_directory ../stylesheets .css
 //= link_tree ../builds
 
-//= link_directory ../javascript .js
+//= link_directory ../../javascript .js
